@@ -7,6 +7,7 @@
   <version>1.0-SNAPSHOT</version>
   <name>my-webapp Maven Webapp</name>
   <url>http://maven.apache.org</url>
+
   <dependencies>
     <dependency>
       <groupId>junit</groupId>
@@ -21,7 +22,8 @@
       <scope>provided</scope>
     </dependency>
   </dependencies>
-    <build>
+
+  <build>
     <finalName>${project.artifactId}</finalName>
     <plugins>
       <plugin>
@@ -40,4 +42,15 @@
       </plugin>
     </plugins>
   </build>
+
+  <distributionManagement>
+    <repository>
+      <id>my-releases</id>
+      <url>http://your-repository-url/repository/maven-releases/</url>
+    </repository>
+    <snapshotRepository>
+      <id>my-snapshots</id>
+      <url>http://your-repository-url/repository/maven-snapshots/</url>
+    </snapshotRepository>
+  </distributionManagement>
 </project>
